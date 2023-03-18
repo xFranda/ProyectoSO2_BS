@@ -1,5 +1,7 @@
+package ProyectoSO2;
 
-import proyectoso2_bs.Dashboard;
+
+import ProyectoSO2.Dashboard;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
