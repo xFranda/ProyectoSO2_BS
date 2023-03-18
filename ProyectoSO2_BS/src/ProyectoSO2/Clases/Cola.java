@@ -93,4 +93,20 @@ public class Cola {
         }
     
     }
+    
+    //Metodo para transformar el cintenido de la cola en un String para la interfaz
+    public String text(Cola A){
+    
+        NodoTLOU serie = A.Inicio;
+        String texto = "";
+
+        while (serie != null){
+
+            TLOU temp = serie.info;
+            texto = texto + "ID:" + temp.id + " Prioridad:" + temp.prioridad + " Contador:" + temp.contador + "\n"; 
+            serie = serie.sig;
+        }
+    
+        return texto;
+    }
 }
