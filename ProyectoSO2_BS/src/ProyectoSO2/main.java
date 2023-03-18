@@ -1,7 +1,12 @@
 package ProyectoSO2;
 
-
+//import org.json.JSONObject;
+import ProyectoSO2.Clases.CPU;
 import ProyectoSO2.Dashboard;
+import java.io.IOException;
+
+
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -18,10 +23,12 @@ public class main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // TODO code application logic here
-        System.out.print("Hola Gebrayel");
-        Dashboard dashboard = new Dashboard();
+        System.out.println("Hola Gebrayel");
+        CPU start = new CPU();
+       
+        
     }
     
 }
