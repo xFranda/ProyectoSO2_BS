@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyectoso2_bs;
+package ProyectoSO2;
 
 /**
  *
@@ -35,7 +35,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectoso2_bs/Imagenes/Proyecto SO HboMax Interface (1366 × 768 px) (1).png"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProyectoSO2/Imagenes/Proyecto SO HboMax Interface (1366 × 768 px) (1).png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

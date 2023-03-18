@@ -51,7 +51,7 @@
         <Component class="javax.swing.JLabel" name="Fondo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/proyectoso2_bs/Imagenes/Proyecto SO HboMax Interface (1366 &#xd7; 768&#xa0;px) (1).png"/>
+              <Image iconType="3" name="/ProyectoSO2/Imagenes/Proyecto SO HboMax Interface (1366 &#xd7; 768&#xa0;px) (1).png"/>
             </Property>
           </Properties>
         </Component>
