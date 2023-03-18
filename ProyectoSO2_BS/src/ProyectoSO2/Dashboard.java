@@ -5,6 +5,8 @@
  */
 package ProyectoSO2;
 
+import ProyectoSO2.Nacho.Reproductor;
+
 /**
  *
  * @author frand
@@ -81,6 +83,11 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.add(jScrollPaneRefuerzos, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, 340, 170));
 
         HalfTime.setText("Half-Time");
+        HalfTime.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HalfTimeActionPerformed(evt);
+            }
+        });
         jPanel1.add(HalfTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 330, -1, -1));
 
         Prioridad1TLOU.setText("Prioridad 1");
@@ -108,6 +115,11 @@ public class Dashboard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void HalfTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HalfTimeActionPerformed
+        // TODO add your handling code here:
+        Reproductor.launch();
+    }//GEN-LAST:event_HalfTimeActionPerformed
 
     /**
      * @param args the command line arguments
