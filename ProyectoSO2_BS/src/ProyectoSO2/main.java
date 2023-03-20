@@ -1,9 +1,10 @@
 package ProyectoSO2;
 
 //import org.json.JSONObject;
+import ProyectoSO2.Clases.API;
 import ProyectoSO2.Clases.CPU;
-import ProyectoSO2.Dashboard;
 import java.io.IOException;
+import java.net.MalformedURLException;
 
 
 
@@ -23,11 +24,11 @@ public class main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, MalformedURLException, IOException {
         // TODO code application logic here
         System.out.println("Hola Gebrayel");
+        API api = new API();
         CPU start = new CPU();
-       
         
     }
     

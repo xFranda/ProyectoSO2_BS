@@ -6,6 +6,9 @@
 package ProyectoSO2.Clases;
 
 import ProyectoSO2.Dashboard;
+import java.io.IOException;
+import java.util.Random;
+import javax.swing.Icon;
 
 /**
  *
@@ -23,7 +26,7 @@ public class CPU {
     IA gtp4;
     
     
-    public CPU () throws InterruptedException {
+    public CPU () throws InterruptedException, IOException {
         
         admin = new Administrador(); //Inicializamos al administrador
         gtp4 = new IA();            //Inicializamos la inteligencia artificial
@@ -31,9 +34,12 @@ public class CPU {
     
         this.contador_ciclos=0;
         
-        TLOU serie = new TLOU(admin.getIdTLOU(),2);
+        int p = new Random().nextInt(3)+1;
+        TLOU serie = new TLOU(admin.getIdTLOU(),p,"Rick Sanchez","https://rickandmortyapi.com/api/character/avatar/1.jpeg",5);
         
         boolean activo = true;
+        
+        Icon icono;
         
         while (activo) {
 
@@ -54,7 +60,7 @@ public class CPU {
 
             if (serie != null) {
 
-                System.out.println("ID:" + serie.id + " Prioridad:" + serie.prioridad + " Contador:" + serie.contador);
+                System.out.println("ID:" + serie.id + " Prioridad:" + serie.prioridad + " Contador: " + serie.contador + " Personaje: "+serie.personaje + " Poder: "+serie.poder);
                 gtp4.recibirSeries(serie, admin.nivel1TLOU, admin.nivel2TLOU, admin.nivel3TLOU, admin.refuerzo);        //La IA que realizara las comparaciones de series
             }
 
@@ -67,10 +73,13 @@ public class CPU {
             Dashboard.Prioridad2.setText(cola2TLOU);
             Dashboard.Prioridad3.setText(cola3TLOU);
             Dashboard.Refuerzos.setText(refuerzo);
-
-
+            
+            
+        
+            int prob_agregar= new Random().nextInt(100)+1;
             if (contador_ciclos == 2) {  //Si ya se recorrieron dos ciclos entra en esta condicional
-
+                
+                
                 contador_ciclos = 0;
                 System.out.println("Agregando");
                 admin.agregarTLOU();//Se agrega TLOU
@@ -86,7 +95,18 @@ public class CPU {
         }
         
         
-        
+        /*int prob = new Random().nextInt(100)+1;
+                
+                if (prob <= 70){
+                contador_ciclos = 0;
+                System.out.println("Agregando");
+                admin.agregarTLOU();//Se agrega TLOU
+                Thread.sleep(1000);
+                
+                }else{
+                    System.out.println("Al administrador le dio flojera agregar una serie");
+                }
+                */
         
         
         

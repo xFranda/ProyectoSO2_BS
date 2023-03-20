@@ -103,7 +103,7 @@ public class Cola {
         while (serie != null){
 
             TLOU temp = serie.info;
-            texto = texto + "ID:" + temp.id + " Prioridad:" + temp.prioridad + " Contador:" + temp.contador + "\n"; 
+            texto = texto + "ID:" + temp.id + " Prioridad:" + temp.prioridad + " Contador:" + temp.contador + "Personaje: "+ temp.personaje + "\n"; 
             serie = serie.sig;
         }
     

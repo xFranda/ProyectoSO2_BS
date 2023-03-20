@@ -17,11 +17,19 @@ public class TLOU {
     int contador;
     String personaje;
     int poder;
+    String image;
     //El atributo de poder se usara para la pelea entre las 2 series.
-    public TLOU (int id, int prioridad){
+    public TLOU (int id, int prioridad, String personaje, String image, int poder){
     this.id = id;
     this.prioridad = prioridad;
+    this.personaje = personaje;
+    this.image = image;
+    this.poder = poder;
     
     }
     
+    public void Personajes(){
+        
+
+}
 }

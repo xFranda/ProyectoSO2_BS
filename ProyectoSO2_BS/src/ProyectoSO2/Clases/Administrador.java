@@ -5,6 +5,7 @@
  */
 package ProyectoSO2.Clases;
 
+import java.io.IOException;
 import java.util.Random;
 
 /**
@@ -16,12 +17,14 @@ public class Administrador {
     int idTLOU;
     int idRM;
     
+    API api;
+    
     Cola nivel1TLOU;
     Cola nivel2TLOU;
     Cola nivel3TLOU;
     Cola refuerzo;
     
-    public Administrador(){
+    public Administrador() throws IOException{
     
     idTLOU = 1;
     idRM=1;
@@ -29,6 +32,7 @@ public class Administrador {
     nivel2TLOU = new Cola();
     nivel3TLOU = new Cola();
     refuerzo = new Cola();
+    api = new API();
     
     
     }
@@ -52,20 +56,50 @@ public class Administrador {
         return idTLOU;
     }
     
-    public int Prioridad(int minutos){
-        minutos = minutos;
+    
+    public int minutosTLOU(){
+        int intro = 0;
+        int inicio1 = 0;
+        int inicio2 = 0;
+        int cierre1 = 0;
+        int cierre2 =0;
+        int creditos = 0;
+        int prob_calidad = 0;
+        int minutos =0;
+        
+        //Se inicializaran los valores de cada parte de un capitulo
+        intro = new Random().nextInt(100)+1; //1 Intro = 0-100
+        
+        inicio1 = new Random().nextInt(100)+1; //2 Inicios = 0-200
+        inicio2 = new Random().nextInt(100)+1;
+        
+        cierre1 = new Random().nextInt(100)+1; //2 Cierres = 0-200
+        cierre1 = new Random().nextInt(100)+1;
+        
+        creditos = new Random().nextInt(100)+1; //1 Credito = 0-100
+        
+        prob_calidad = (intro+inicio1+inicio2+cierre1+cierre2+creditos)/6;
+        
+        minutos = 10+prob_calidad;
+        
+        return minutos;
+    
+    }
+    public int Prioridad(){
+        int minutos = minutosTLOU();
         int prioridad =0;
+        
         if (minutos <60){
              //Prioridad mas baja
              prioridad = 3;
          }
          
-        if (minutos <90 ){
+        else if (minutos <90 ){
             //Prioridad media
             prioridad = 2;
         }
         
-        if (minutos >= 90 ){
+        else if (minutos >= 90 ){
             //Prioridad alta
             prioridad = 1;
         }
@@ -75,13 +109,17 @@ public class Administrador {
     
     //Metodo para agregar una serie a la cola que le corresponde
     //Mas tarde le creare la funcion para mejorarla
-    public void agregarTLOU(){
+    public void agregarTLOU() throws IOException{
     
         this.idTLOU++;
         
-         int minutos = new Random().nextInt(100)+1;
-         int prioridad = Prioridad(minutos);
-         TLOU serie = new TLOU (this.idTLOU,prioridad);
+        
+         int prioridad = Prioridad();
+         
+         String personaje = api.APIname(String.valueOf(new Random().nextInt(3)+1));
+         String image = api.APIimage(String.valueOf(new Random().nextInt(3)+1));
+         int poder = new Random().nextInt(10)+1;
+         TLOU serie = new TLOU (this.idTLOU,prioridad,personaje,image,poder);
          
          switch (serie.prioridad) {                     
 
