@@ -80,10 +80,10 @@ public class CPU {
             if (contador_ciclos == 2) {  //Si ya se recorrieron dos ciclos entra en esta condicional
                 
                 
-                contador_ciclos = 0;
-                System.out.println("Agregando");
-                admin.agregarTLOU();//Se agrega TLOU
-                Thread.sleep(1000);
+            contador_ciclos = 0;
+            System.out.println("Agregando");
+            admin.agregarTLOU();//Se agrega TLOU
+            Thread.sleep(1000);
 
             }
 
