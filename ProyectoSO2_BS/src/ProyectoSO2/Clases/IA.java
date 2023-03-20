@@ -5,9 +5,16 @@
  */
 package ProyectoSO2.Clases;
 
+import ProyectoSO2.Dashboard;
+import java.awt.Image;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -36,7 +43,18 @@ public class IA {
     
     public void recibirSeries(TLOU serie, Cola A, Cola B, Cola C, Cola D) {
         
+        Icon icono;
+        Image imagen = null;
         try {
+            try {
+            //Inicializar y asignar url de la imagen a mostrar
+            URL url = new URL(serie.image);
+            //Asignacion de url a la imagen
+            imagen = ImageIO.read(url);
+            icono = new ImageIcon(imagen);
+            Dashboard.TLOUIcon.setIcon(icono);
+               } catch (IOException e) {
+                                      e.printStackTrace();}
             
             int prob = new Random().nextInt(100);
             Thread.sleep(1000);  
