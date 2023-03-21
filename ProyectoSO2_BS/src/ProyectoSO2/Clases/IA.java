@@ -41,18 +41,18 @@ public class IA {
         return RMlistos;
     }
     
-    public void recibirSeries(TLOU serie, Cola A, Cola B, Cola C, Cola D) {
+    public void recibirSeries(TLOU serieTLOU, Cola A, Cola B, Cola C, Cola D) {
         
         Icon icono;
         Image imagen = null;
         try {
             try {
             //Inicializar y asignar url de la imagen a mostrar
-            URL url = new URL(serie.image);
+            URL url = new URL(serieTLOU.image);
             //Asignacion de url a la imagen
             imagen = ImageIO.read(url);
             icono = new ImageIcon(imagen);
-            Dashboard.TLOUIcon.setIcon(icono);
+            Dashboard.TLOUIcon.setIcon(icono); //Metodo para que se coloque un Ícono al dashboard
                } catch (IOException e) {
                                       e.printStackTrace();}
             
@@ -63,21 +63,22 @@ public class IA {
             //probabilidad de encolarse de nuevo
             if (prob <= 27){
                 
-                serie.contador = 0;
+                serieTLOU.contador = 0;
+                //serieRM.contador =0;
                 
-                switch (serie.prioridad) {
+                switch (serieTLOU.prioridad) {
 
                     case 1:
 
-                        A.insertarCola(serie);       
-
+                        A.insertarCola(serieTLOU);       
+                        //E.insertarCola(serieRM) 
                         System.out.println("cola 1");
 
                         break;
 
                     case 2:
 
-                        B.insertarCola(serie);          
+                        B.insertarCola(serieTLOU);          
 
                         System.out.println("cola 2");
 
@@ -85,7 +86,7 @@ public class IA {
 
                     case 3:
 
-                        C.insertarCola(serie);           
+                        C.insertarCola(serieTLOU);           
 
                         System.out.println("cola 3");
 
@@ -95,6 +96,38 @@ public class IA {
                         System.out.println("error");
                         break;
                 
+                  
+                    //Para verificar la prioridad de la serie de RM que llegó y meterla en su cola
+                    /*switch (serieRM.prioridad) {
+
+                    case 1:
+
+                        E.insertarCola(serieTLOU);       
+                        //E.insertarCola(serieRM) 
+                        System.out.println("cola 1");
+
+                        break;
+
+                    case 2:
+
+                        F.insertarCola(serieTLOU);          
+
+                        System.out.println("cola 2");
+
+                        break;
+
+                    case 3:
+
+                        G.insertarCola(serieTLOU);           
+
+                        System.out.println("cola 3");
+
+                        break;
+
+                    default:
+                        System.out.println("error");
+                        break;
+                */
                 
                 
                 
@@ -106,9 +139,9 @@ public class IA {
             } else if (27 < prob && prob <= 60) {
                     
                     
-                serie.contador = 0;                                     
-                D.insertarCola(serie);                                     
-
+                serieTLOU.contador = 0;                                     
+                D.insertarCola(serieTLOU);                                     
+                //D.insertarCola(serieRM); Para que se inserte la serie de RM en caso de requerir refuerzo las 2.
                 System.out.println("Refuerzo");
                 
 
