@@ -44,6 +44,9 @@ public class Dashboard extends javax.swing.JFrame {
         jScrollPaneRefuerzos = new javax.swing.JScrollPane();
         Refuerzos = new javax.swing.JTextArea();
         HalfTime = new javax.swing.JButton();
+        idTLOU = new javax.swing.JTextField();
+        nombreTLOU = new javax.swing.JTextField();
+        poderTLOU = new javax.swing.JTextField();
         Prioridad1TLOU = new javax.swing.JLabel();
         Prioridad2TLOU = new javax.swing.JLabel();
         Prioridad3TLOU = new javax.swing.JLabel();
@@ -107,6 +110,21 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(HalfTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 330, -1, -1));
 
+        idTLOU.setEditable(false);
+        idTLOU.setRequestFocusEnabled(false);
+        idTLOU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idTLOUActionPerformed(evt);
+            }
+        });
+        jPanel1.add(idTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 120, 30, -1));
+
+        nombreTLOU.setEditable(false);
+        jPanel1.add(nombreTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 180, 150, -1));
+
+        poderTLOU.setEditable(false);
+        jPanel1.add(poderTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 240, 30, -1));
+
         Prioridad1TLOU.setForeground(new java.awt.Color(255, 255, 255));
         Prioridad1TLOU.setText("Prioridad 1");
         jPanel1.add(Prioridad1TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 430, -1, -1));
@@ -140,6 +158,10 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
         Reproductor.launch();
     }//GEN-LAST:event_HalfTimeActionPerformed
+
+    private void idTLOUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTLOUActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idTLOUActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,7 +213,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel Prioridad3TLOU;
     public static javax.swing.JTextArea Refuerzos;
     public static javax.swing.JLabel TLOUIcon;
+    public static javax.swing.JTextField idTLOU;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPaneRefuerzos;
+    public static javax.swing.JTextField nombreTLOU;
+    public static javax.swing.JTextField poderTLOU;
     // End of variables declaration//GEN-END:variables
 }

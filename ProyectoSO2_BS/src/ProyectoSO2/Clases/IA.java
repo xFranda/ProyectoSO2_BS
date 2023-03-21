@@ -52,9 +52,16 @@ public class IA {
             //Asignacion de url a la imagen
             imagen = ImageIO.read(url);
             icono = new ImageIcon(imagen);
-            Dashboard.TLOUIcon.setIcon(icono); //Metodo para que se coloque un Ícono al dashboard
+            Dashboard.TLOUIcon.setIcon(icono); //Metodo para que se coloque un Ícono al dashboard serieTLOU.poder
+            Dashboard.idTLOU.setText(String.valueOf(serieTLOU.id));
+            Dashboard.nombreTLOU.setText(serieTLOU.personaje);
+            Dashboard.poderTLOU.setText(String.valueOf(serieTLOU.poder));
+            
                } catch (IOException e) {
                                       e.printStackTrace();}
+            
+            
+            
             
             int prob = new Random().nextInt(100);
             Thread.sleep(1000);  
