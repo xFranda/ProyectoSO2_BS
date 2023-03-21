@@ -28,8 +28,4 @@ public class TLOU {
     
     }
     
-    public void Personajes(){
-        
-
-}
 }

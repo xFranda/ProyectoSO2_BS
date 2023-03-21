@@ -21,7 +21,8 @@ public class Administrador {
     
     Cola nivel1TLOU;
     Cola nivel2TLOU;
-    Cola nivel3TLOU;
+    Cola nivel3TLOU; 
+    //Crear aquí las 3 colas de prioridad de RM, pueden ser nivel1RM, nivel2RM y nivel3RM
     Cola refuerzo;
     
     public Administrador() throws IOException{
@@ -32,6 +33,7 @@ public class Administrador {
     nivel2TLOU = new Cola();
     nivel3TLOU = new Cola();
     refuerzo = new Cola();
+    //Crear aquí las colitas de RM
     api = new API();
     
     
@@ -56,7 +58,11 @@ public class Administrador {
         return idTLOU;
     }
     
+    //Craer los lindos metodos de RM
     
+    
+    
+    //Guiate de este miuntosTLOU y prioridadTLOU para el extra de lo aleatorio de tu serie.
     public int minutosTLOU(){
         int intro = 0;
         int inicio1 = 0;
@@ -67,6 +73,7 @@ public class Administrador {
         int prob_calidad = 0;
         int minutos =0;
         
+        //En este caso, un cap de TLOU tiene 1 intro, 2 inicios, 2 cierres y 1 credito.
         //Se inicializaran los valores de cada parte de un capitulo
         intro = new Random().nextInt(100)+1; //1 Intro = 0-100
         
@@ -74,7 +81,7 @@ public class Administrador {
         inicio2 = new Random().nextInt(100)+1;
         
         cierre1 = new Random().nextInt(100)+1; //2 Cierres = 0-200
-        cierre1 = new Random().nextInt(100)+1;
+        cierre2 = new Random().nextInt(100)+1;
         
         creditos = new Random().nextInt(100)+1; //1 Credito = 0-100
         
@@ -85,7 +92,7 @@ public class Administrador {
         return minutos;
     
     }
-    public int Prioridad(){
+    public int PrioridadTLOU(){
         int minutos = minutosTLOU();
         int prioridad =0;
         
@@ -108,13 +115,12 @@ public class Administrador {
     }
     
     //Metodo para agregar una serie a la cola que le corresponde
-    //Mas tarde le creare la funcion para mejorarla
     public void agregarTLOU() throws IOException{
     
         this.idTLOU++;
         
         
-         int prioridad = Prioridad();
+         int prioridad = PrioridadTLOU();
          
          String personaje = api.APIname(String.valueOf(new Random().nextInt(3)+1));
          String image = api.APIimage(String.valueOf(new Random().nextInt(3)+1));
@@ -147,6 +153,9 @@ public class Administrador {
          
     
     }
+    
+    //Crear metodo de agregar RM
+    
     
     //Metodo para actualizar la prioridad de las series y las colas.
     
@@ -184,7 +193,7 @@ public class Administrador {
             if (prob <= 70) {
 
                 TLOU temp = refuerzo.sacarCola();      
-
+                
                 switch (temp.prioridad) {        
 
                     case 1:
