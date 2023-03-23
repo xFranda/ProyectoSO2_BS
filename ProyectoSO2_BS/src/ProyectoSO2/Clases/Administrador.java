@@ -210,8 +210,42 @@ public class Administrador {
          
     
     }
+    public void agregarRM() throws IOException{
     
-    //Crear metodo de agregar RM
+        this.idRM++;
+        
+        
+         int prioridad = PrioridadRM();
+         
+         String nombre = api.APIname(String.valueOf(new Random().nextInt(3)+1));
+         String foto = api.APIimage(String.valueOf(new Random().nextInt(3)+1));
+         int poder = new Random().nextInt(10)+1;
+         RyM serie = new RyM (this.idTLOU,prioridad,nombre,poder, foto);
+         
+         switch (serie.prioridad) {                     
+
+            case 1:
+
+                nivel1RM.insertar(serie);
+                break;
+
+            case 2:
+
+                nivel2RM.insertar(serie);
+                break;
+
+            case 3:
+
+                nivel3RM.insertar(serie);
+                break;
+
+            default:
+                System.out.println("error");
+                break;
+
+        }
+    }
+    
     
     
     //Metodo para actualizar la prioridad de las series y las colas.
