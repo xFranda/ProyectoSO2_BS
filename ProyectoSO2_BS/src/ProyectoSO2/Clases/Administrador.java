@@ -212,9 +212,7 @@ public class Administrador {
     }
     public void agregarRM() throws IOException{
     
-        this.idRM++;
-        
-        
+        this.idRM++;       
          int prioridad = PrioridadRM();
          
          String nombre = api.APIname(String.valueOf(new Random().nextInt(3)+1));
@@ -223,22 +221,15 @@ public class Administrador {
          RyM serie = new RyM (this.idTLOU,prioridad,nombre,poder, foto);
          
          switch (serie.prioridad) {                     
-
             case 1:
-
                 nivel1RM.insertar(serie);
                 break;
-
             case 2:
-
                 nivel2RM.insertar(serie);
                 break;
-
             case 3:
-
                 nivel3RM.insertar(serie);
                 break;
-
             default:
                 System.out.println("error");
                 break;
@@ -332,6 +323,27 @@ public class Administrador {
         } else if (!nivel3TLOU.colaVacia()) {
 
             TLOU serie = nivel3TLOU.sacarCola();
+            return serie;
+        } else {
+            return null;
+        }
+    } 
+    
+     public RyM sigRM() {
+
+        if (!nivel1RM.colaVacia()) {
+
+            RyM serie = nivel1RM.retirar();
+            return serie;
+
+        } else if (!nivel2RM.colaVacia()) {
+
+            RyM serie = nivel2RM.retirar();
+            return serie;
+            
+        } else if (!nivel3TLOU.colaVacia()) {
+
+            RyM serie = nivel3RM.retirar();
             return serie;
         } else {
             return null;
