@@ -13,11 +13,17 @@ public class RyM {
     int id; 
     int prioridad; 
     int cont; 
+    String nombre; 
+    int poder; 
+    String foto; 
     
-    public RyM(int id, int prioridad) {
+    public RyM(int id, int prioridad, String nombre, int poder, String foto) {
         this.id = id;
         this.prioridad = prioridad;
         this.cont = 0;
+        this.nombre = nombre; 
+        this.poder = poder; 
+        this.foto = foto; 
     }
     
 }
