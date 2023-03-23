@@ -35,8 +35,8 @@ public class CPU {
         this.contador_ciclos=0;
         
         int p = new Random().nextInt(3)+1;
-        TLOU serieTLOU = new TLOU(admin.getIdTLOU(),p,"Rick Sanchez","https://rickandmortyapi.com/api/character/avatar/1.jpeg",5);
-        admin.listaPrioridadTLOU(serieTLOU);
+        TLOU serieTLOU = null; //new TLOU(admin.getIdTLOU(),p,"Rick Sanchez","https://rickandmortyapi.com/api/character/avatar/1.jpeg",5);
+        //admin.listaPrioridadTLOU(serieTLOU);
         
         
         boolean activo = true;
@@ -77,6 +77,7 @@ public class CPU {
             
         
             int prob_agregar= new Random().nextInt(100)+1;
+            
             if (contador_ciclos == 2) {  //Si ya se recorrieron dos ciclos entra en esta condicional
                 
                 

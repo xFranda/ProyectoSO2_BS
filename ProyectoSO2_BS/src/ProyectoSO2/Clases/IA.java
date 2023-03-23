@@ -57,6 +57,7 @@ public class IA {
             Dashboard.nombreTLOU.setText(serieTLOU.personaje);
             Dashboard.poderTLOU.setText(String.valueOf(serieTLOU.poder));
             
+            
                } catch (IOException e) {
                                       e.printStackTrace();}
             
@@ -64,7 +65,8 @@ public class IA {
             
             
             int prob = new Random().nextInt(100);
-            Thread.sleep(1000);  
+            Thread.sleep(2000);  
+            
             
             
             //probabilidad de encolarse de nuevo
@@ -160,6 +162,10 @@ public class IA {
                 this.TLOUlistos++;
                 System.out.println("Salio al mercadito");
             }
+            Dashboard.TLOUIcon.setIcon(null);
+            Dashboard.idTLOU.setText("");
+            Dashboard.nombreTLOU.setText("");
+            Dashboard.poderTLOU.setText("");
             
             
         } catch (InterruptedException ex) {

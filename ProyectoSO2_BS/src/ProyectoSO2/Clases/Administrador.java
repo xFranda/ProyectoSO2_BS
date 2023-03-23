@@ -27,8 +27,8 @@ public class Administrador {
     
     public Administrador() throws IOException{
     
-    idTLOU = 1;
-    idRM=1;
+    idTLOU = 0;
+    idRM=0;
     nivel1TLOU = new Cola();
     nivel2TLOU = new Cola();
     nivel3TLOU = new Cola();
@@ -290,7 +290,7 @@ public class Administrador {
 
             case 3:
 
-                nivel2TLOU.insertarCola(serieTLOU);
+                nivel3TLOU.insertarCola(serieTLOU);
                 break;
 
             default:

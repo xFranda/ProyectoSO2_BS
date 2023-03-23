@@ -50,6 +50,9 @@ public class Dashboard extends javax.swing.JFrame {
         Prioridad1TLOU = new javax.swing.JLabel();
         Prioridad2TLOU = new javax.swing.JLabel();
         Prioridad3TLOU = new javax.swing.JLabel();
+        IDTLOU = new javax.swing.JLabel();
+        NameTLOU = new javax.swing.JLabel();
+        PoderTLOU = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -127,7 +130,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         Prioridad1TLOU.setForeground(new java.awt.Color(255, 255, 255));
         Prioridad1TLOU.setText("Prioridad 1");
-        jPanel1.add(Prioridad1TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 430, -1, -1));
+        jPanel1.add(Prioridad1TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 430, -1, -1));
 
         Prioridad2TLOU.setForeground(new java.awt.Color(255, 255, 255));
         Prioridad2TLOU.setText("Prioridad 2");
@@ -136,6 +139,18 @@ public class Dashboard extends javax.swing.JFrame {
         Prioridad3TLOU.setForeground(new java.awt.Color(255, 255, 255));
         Prioridad3TLOU.setText("Prioridad 3");
         jPanel1.add(Prioridad3TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 590, -1, -1));
+
+        IDTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        IDTLOU.setText("ID");
+        jPanel1.add(IDTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 100, -1, -1));
+
+        NameTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        NameTLOU.setText("Nombre");
+        jPanel1.add(NameTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 160, -1, -1));
+
+        PoderTLOU.setForeground(new java.awt.Color(255, 255, 255));
+        PoderTLOU.setText("Poder ");
+        jPanel1.add(PoderTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 220, -1, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProyectoSO2/Imagenes/Proyecto SO HboMax Interface (1366 × 768 px) (1).png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -204,7 +219,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JScrollPane Cola3TLOU;
     private javax.swing.JLabel Fondo;
     private javax.swing.JButton HalfTime;
+    private javax.swing.JLabel IDTLOU;
     public javax.swing.JPanel IconTLOU;
+    private javax.swing.JLabel NameTLOU;
+    private javax.swing.JLabel PoderTLOU;
     public static javax.swing.JTextArea Prioridad1;
     private javax.swing.JLabel Prioridad1TLOU;
     public static javax.swing.JTextArea Prioridad2;
