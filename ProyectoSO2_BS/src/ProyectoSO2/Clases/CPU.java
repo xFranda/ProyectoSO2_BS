@@ -35,11 +35,11 @@ public class CPU {
         this.contador_ciclos=0;
         
         int p = new Random().nextInt(3)+1;
-        TLOU serie = new TLOU(admin.getIdTLOU(),p,"Rick Sanchez","https://rickandmortyapi.com/api/character/avatar/1.jpeg",5);
+        TLOU serieTLOU = null; //new TLOU(admin.getIdTLOU(),p,"Rick Sanchez","https://rickandmortyapi.com/api/character/avatar/1.jpeg",5);
+        //admin.listaPrioridadTLOU(serieTLOU);
+        
         
         boolean activo = true;
-        
-        Icon icono;
         
         while (activo) {
 
@@ -58,10 +58,10 @@ public class CPU {
             Dashboard.Refuerzos.setText(refuerzo);
             
 
-            if (serie != null) {
+            if (serieTLOU != null) {
 
-                System.out.println("ID:" + serie.id + " Prioridad:" + serie.prioridad + " Contador: " + serie.contador + " Personaje: "+serie.personaje + " Poder: "+serie.poder);
-                gtp4.recibirSeries(serie, admin.nivel1TLOU, admin.nivel2TLOU, admin.nivel3TLOU, admin.refuerzo);        //La IA que realizara las comparaciones de series
+                System.out.println("ID:" + serieTLOU.id + " Prioridad:" + serieTLOU.prioridad + " Contador: " + serieTLOU.contador + " Personaje: "+serieTLOU.personaje + " Poder: "+serieTLOU.poder);
+                gtp4.recibirSeries(serieTLOU, admin.nivel1TLOU, admin.nivel2TLOU, admin.nivel3TLOU, admin.refuerzo);        //La IA que realizara las comparaciones de series
             }
 
             cola1TLOU = admin.stringTLOU_N1();       //Obtiene la lista de prioridad 1 en un String
@@ -77,6 +77,7 @@ public class CPU {
             
         
             int prob_agregar= new Random().nextInt(100)+1;
+            
             if (contador_ciclos == 2) {  //Si ya se recorrieron dos ciclos entra en esta condicional
                 
                 
@@ -89,7 +90,7 @@ public class CPU {
 
             Thread.sleep(1000);  //Se duermo un segundo el programa para que se pueda revisar bien
 
-            serie = admin.sigTLOU();
+            serieTLOU = admin.sigTLOU();
             contador_ciclos++;
 
         }
@@ -114,17 +115,8 @@ public class CPU {
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+ 
     }
+    
+    
 }

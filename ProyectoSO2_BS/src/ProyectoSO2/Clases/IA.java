@@ -52,12 +52,21 @@ public class IA {
             //Asignacion de url a la imagen
             imagen = ImageIO.read(url);
             icono = new ImageIcon(imagen);
-            Dashboard.TLOUIcon.setIcon(icono); //Metodo para que se coloque un Ícono al dashboard
+            Dashboard.TLOUIcon.setIcon(icono); //Metodo para que se coloque un Ícono al dashboard serieTLOU.poder
+            Dashboard.idTLOU.setText(String.valueOf(serieTLOU.id));
+            Dashboard.nombreTLOU.setText(serieTLOU.personaje);
+            Dashboard.poderTLOU.setText(String.valueOf(serieTLOU.poder));
+            
+            
                } catch (IOException e) {
                                       e.printStackTrace();}
             
+            
+            
+            
             int prob = new Random().nextInt(100);
-            Thread.sleep(1000);  
+            Thread.sleep(2000);  
+            
             
             
             //probabilidad de encolarse de nuevo
@@ -153,6 +162,10 @@ public class IA {
                 this.TLOUlistos++;
                 System.out.println("Salio al mercadito");
             }
+            Dashboard.TLOUIcon.setIcon(null);
+            Dashboard.idTLOU.setText("");
+            Dashboard.nombreTLOU.setText("");
+            Dashboard.poderTLOU.setText("");
             
             
         } catch (InterruptedException ex) {
