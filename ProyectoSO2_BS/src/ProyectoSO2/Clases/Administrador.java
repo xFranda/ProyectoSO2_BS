@@ -369,6 +369,19 @@ public class Administrador {
 
         return texto;
     }  
+    
+    public String stringRM1() {
+        String texto = nivel1RM.texto(nivel1RM);
+        return texto;
+    }  
+     public String stringRM2() {
+        String texto = nivel2RM.texto(nivel2RM);
+        return texto;
+    }  
+      public String stringRM3() {
+        String texto = nivel3RM.texto(nivel3RM);
+        return texto;
+    }  
 
     public String stringRefuerzo() {
         String texto = refuerzo.text(refuerzo);
