@@ -121,9 +121,9 @@ public class Administrador {
         
         
          int prioridad = PrioridadTLOU();
-         
-         String personaje = api.APIname(String.valueOf(new Random().nextInt(3)+1));
-         String image = api.APIimage(String.valueOf(new Random().nextInt(3)+1));
+         String num = String.valueOf(new Random().nextInt(3)+1);
+         String personaje = api.APIname(num);
+         String image = api.APIimage(num);
          int poder = new Random().nextInt(10)+1;
          TLOU serie = new TLOU (this.idTLOU,prioridad,personaje,image,poder);
          
@@ -190,7 +190,7 @@ public class Administrador {
 
             int prob = new Random().nextInt(100);   
 
-            if (prob <= 70) {
+            if (prob <= 40) {
 
                 TLOU temp = refuerzo.sacarCola();      
                 
@@ -274,7 +274,32 @@ public class Administrador {
     
     
     
+    public void listaPrioridadTLOU(TLOU serieTLOU){
+    serieTLOU = serieTLOU;
+    switch (serieTLOU.prioridad) {                     
+
+            case 1:
+
+                nivel1TLOU.insertarCola(serieTLOU);
+                break;
+
+            case 2:
+
+                nivel2TLOU.insertarCola(serieTLOU);
+                break;
+
+            case 3:
+
+                nivel2TLOU.insertarCola(serieTLOU);
+                break;
+
+            default:
+                System.out.println("error");
+                break;
+
+        }
     
+    }
     
     
     
