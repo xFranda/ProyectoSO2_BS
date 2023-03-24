@@ -87,7 +87,7 @@ public class ColaRyM {
 
         while (temp != null) {          
             RyM z = temp.datos;     
-            escrib = escrib + "ID:" + z.id + " Prioridad:" + z.prioridad + " Index:" + z.cont + "\n"; 
+            escrib = escrib + "ID:" + z.id + " Prioridad:" + z.prioridad + "Index :" + z.cont + "Personaje" + z.nombre + "\n"; 
             temp = temp.sig;                 
         }
         return escrib;

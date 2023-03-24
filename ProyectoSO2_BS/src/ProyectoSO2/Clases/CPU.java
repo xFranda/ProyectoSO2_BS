@@ -21,6 +21,9 @@ public class CPU {
     String cola1TLOU;
     String cola2TLOU;
     String cola3TLOU;
+    String cola1RM;
+    String cola2RM; 
+    String cola3RM;
     String refuerzo;
     Administrador admin;
     IA gtp4;
@@ -56,9 +59,16 @@ public class CPU {
             cola3TLOU = admin.stringTLOU_N3();       //Obtiene la lista de prioridad 3 en un String
             refuerzo = admin.stringRefuerzo();
             
+            cola1RM = admin.stringRM1();       //Obtiene la lista de prioridad 1 en un String
+            cola2RM = admin.stringRM2();       //Obtiene la lista de prioridad 2 en un String
+            cola3RM = admin.stringRM3();       //Obtiene la lista de prioridad 3 en un String
+           
             Dashboard.Prioridad1.setText(cola1TLOU);
             Dashboard.Prioridad2.setText(cola2TLOU);
             Dashboard.Prioridad3.setText(cola3TLOU);
+            Dashboard.Prioridad4.setText(cola1RM);
+            Dashboard.Prioridad5.setText(cola2RM);
+            Dashboard.Prioridad6.setText(cola3RM);
             Dashboard.Refuerzos.setText(refuerzo);
             
 
@@ -72,12 +82,19 @@ public class CPU {
             cola2TLOU = admin.stringTLOU_N2();       //Obtiene la lista de prioridad 2 en un String
             cola3TLOU = admin.stringTLOU_N3();       //Obtiene la lista de prioridad 3 en un String
             refuerzo = admin.stringRefuerzo();           //Obtiene la lista de reparacion en un String
+            cola1RM = admin.stringRM1();       //Obtiene la lista de prioridad 1 en un String
+            cola2RM = admin.stringRM2();       //Obtiene la lista de prioridad 2 en un String
+            cola3RM = admin.stringRM3();       //Obtiene la lista de prioridad 3 en un String
+            
             
             Dashboard.Prioridad1.setText(cola1TLOU);
             Dashboard.Prioridad2.setText(cola2TLOU);
             Dashboard.Prioridad3.setText(cola3TLOU);
             Dashboard.Refuerzos.setText(refuerzo);
-            
+            Dashboard.Prioridad4.setText(cola1RM);
+            Dashboard.Prioridad5.setText(cola2RM);
+            Dashboard.Prioridad6.setText(cola3RM);
+            Dashboard.Refuerzos.setText(refuerzo);
             
         
             int prob_agregar= new Random().nextInt(100)+1;
