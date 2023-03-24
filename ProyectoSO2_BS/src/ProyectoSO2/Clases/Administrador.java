@@ -171,12 +171,10 @@ public class Administrador {
     public void agregarTLOU() throws IOException{
     
         this.idTLOU++;
-        
-        
          int prioridad = PrioridadTLOU();
-         
-         String personaje = api.APIname(String.valueOf(new Random().nextInt(3)+1));
-         String image = api.APIimage(String.valueOf(new Random().nextInt(3)+1));
+         String num = String.valueOf(new Random().nextInt(3)+1);
+         String personaje = api.APIname(num);
+         String image = api.APIimage(num);
          int poder = new Random().nextInt(10)+1;
          TLOU serie = new TLOU (this.idTLOU,prioridad,personaje,image,poder);
          
