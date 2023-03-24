@@ -26,6 +26,7 @@ public class Administrador {
     ColaRyM nivel2RM;
     ColaRyM nivel3RM; 
     Cola refuerzo;
+    ColaRyM refuerzoRM;
     
     public Administrador() throws IOException{
     
@@ -35,6 +36,7 @@ public class Administrador {
     nivel2TLOU = new Cola();
     nivel3TLOU = new Cola();
     refuerzo = new Cola();
+    refuerzoRM = new ColaRyM();
     nivel1RM = new ColaRyM(); 
     nivel2RM = new ColaRyM();
     nivel3RM = new ColaRyM();
@@ -292,38 +294,74 @@ public class Administrador {
             int prob = new Random().nextInt(100);   
 
             if (prob <= 40) {
-
-                TLOU temp = refuerzo.sacarCola();      
+                boolean activo = true;
+        
+                while (activo) {
+                TLOU temp = refuerzo.sacarCola(); 
+                RyM temp2 = refuerzoRM.retirar(); 
                 
-                switch (temp.prioridad) {        
+                if (temp.localizador == "TLOU"&& temp2.localizador == "RM"){
+                    activo = false;
+                    switch (temp.prioridad) {        
 
                     case 1:
 
                         nivel1TLOU.insertarCola(temp);   //Se inserta en cola a
 
-                        break;
+                        
 
                     case 2:
 
                         nivel2TLOU.insertarCola(temp);   //Se inserta en cola b
 
-                        break;
+                        
 
                     case 3:
 
                         nivel3TLOU.insertarCola(temp);  //Se inserta en cola c
+
+
+                    default:
+                        System.out.println("error");
+                    
+                    switch (temp2.prioridad) {        
+
+                    case 1:
+
+                        nivel1RM.insertar(temp2);   //Se inserta en cola f
+
+                        break;
+
+                    case 2:
+
+                        nivel2RM.insertar(temp2);   //Se inserta en cola g
+
+                        break;
+
+                    case 3:
+
+                        nivel3RM.insertar(temp2);  //Se inserta en cola h
 
                         break;
 
                     default:
                         System.out.println("error");
                         break;
+                       
+                    
+                }
+                }
+                    
+                
+               
                 }
             }
 
         }
+        }
+    }
 
-    } 
+     
 
     
 

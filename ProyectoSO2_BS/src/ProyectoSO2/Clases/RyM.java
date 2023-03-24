@@ -15,6 +15,7 @@ public class RyM {
     String nombre; 
     int poder; 
     String foto; 
+    String localizador;
     
     public RyM(int id, int prioridad, String nombre, int poder, String foto) {
         this.id = id;
@@ -22,5 +23,6 @@ public class RyM {
         this.nombre = nombre; 
         this.poder = poder; 
         this.foto = foto; 
+        this.localizador = "RM";
     }
 }
