@@ -19,7 +19,6 @@ public class RyM {
     public RyM(int id, int prioridad, String nombre, int poder, String foto) {
         this.id = id;
         this.prioridad = prioridad;
-        this.cont = 0;
         this.nombre = nombre; 
         this.poder = poder; 
         this.foto = foto; 

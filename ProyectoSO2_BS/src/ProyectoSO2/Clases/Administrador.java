@@ -206,13 +206,13 @@ public class Administrador {
     }
     public void agregarRM() throws IOException{
     
-         this.idRM++;       
+        this.idRM++;       
          int prioridad = PrioridadRM();
          String num = String.valueOf(new Random().nextInt(3)+1);
          String nombre = api.APIname(num);
          String foto = api.APIimage(num);        
          int poder = new Random().nextInt(10)+1;
-         RyM serie = new RyM (this.idTLOU,prioridad,nombre,poder, foto);
+         RyM serie = new RyM (this.idRM,prioridad,nombre,poder, foto);
          
          switch (serie.prioridad) {                     
             case 1:
@@ -291,7 +291,7 @@ public class Administrador {
 
             int prob = new Random().nextInt(100);   
 
-            if (prob <= 70) {
+            if (prob <= 40) {
 
                 TLOU temp = refuerzo.sacarCola();      
                 

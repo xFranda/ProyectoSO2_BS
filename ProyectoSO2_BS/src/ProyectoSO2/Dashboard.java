@@ -32,8 +32,12 @@ public class Dashboard extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        IconRM = new javax.swing.JPanel();
+        TLOUIcon3 = new javax.swing.JLabel();
+        TLOUIcon2 = new javax.swing.JLabel();
         IconTLOU = new javax.swing.JPanel();
         TLOUIcon = new javax.swing.JLabel();
+        TLOUIcon1 = new javax.swing.JLabel();
         Cola1TLOU = new javax.swing.JScrollPane();
         Prioridad1 = new javax.swing.JTextArea();
         Cola2TLOU = new javax.swing.JScrollPane();
@@ -43,8 +47,11 @@ public class Dashboard extends javax.swing.JFrame {
         jScrollPaneRefuerzos = new javax.swing.JScrollPane();
         Refuerzos = new javax.swing.JTextArea();
         HalfTime = new javax.swing.JButton();
+        idRM = new javax.swing.JTextField();
         idTLOU = new javax.swing.JTextField();
+        nombreRM = new javax.swing.JTextField();
         nombreTLOU = new javax.swing.JTextField();
+        poderRM = new javax.swing.JTextField();
         poderTLOU = new javax.swing.JTextField();
         Prioridad1TLOU = new javax.swing.JLabel();
         Prioridad2TLOU = new javax.swing.JLabel();
@@ -52,6 +59,18 @@ public class Dashboard extends javax.swing.JFrame {
         IDTLOU = new javax.swing.JLabel();
         NameTLOU = new javax.swing.JLabel();
         PoderTLOU = new javax.swing.JLabel();
+        Prioridad1Rm = new javax.swing.JLabel();
+        Prioridad2TLOU1 = new javax.swing.JLabel();
+        Prioridad3TLOU1 = new javax.swing.JLabel();
+        Cola3RM = new javax.swing.JScrollPane();
+        Prioridad6 = new javax.swing.JTextArea();
+        Cola2RM = new javax.swing.JScrollPane();
+        Prioridad5 = new javax.swing.JTextArea();
+        Cola1RM = new javax.swing.JScrollPane();
+        Prioridad4 = new javax.swing.JTextArea();
+        IDTLOU1 = new javax.swing.JLabel();
+        NameTLOU1 = new javax.swing.JLabel();
+        PoderTLOU1 = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,17 +80,60 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        TLOUIcon3.setForeground(new java.awt.Color(255, 255, 255));
+
+        TLOUIcon2.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout IconRMLayout = new javax.swing.GroupLayout(IconRM);
+        IconRM.setLayout(IconRMLayout);
+        IconRMLayout.setHorizontalGroup(
+            IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IconRMLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(TLOUIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(IconRMLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(TLOUIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        IconRMLayout.setVerticalGroup(
+            IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IconRMLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(TLOUIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(IconRMLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(TLOUIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanel1.add(IconRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 260, 240));
+
         TLOUIcon.setForeground(new java.awt.Color(255, 255, 255));
+
+        TLOUIcon1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout IconTLOULayout = new javax.swing.GroupLayout(IconTLOU);
         IconTLOU.setLayout(IconTLOULayout);
         IconTLOULayout.setHorizontalGroup(
             IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(TLOUIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+            .addGroup(IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(IconTLOULayout.createSequentialGroup()
+                    .addGap(10, 10, 10)
+                    .addComponent(TLOUIcon1, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         IconTLOULayout.setVerticalGroup(
             IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(TLOUIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+            .addGroup(IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(IconTLOULayout.createSequentialGroup()
+                    .addGap(10, 10, 10)
+                    .addComponent(TLOUIcon1, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         jPanel1.add(IconTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, 260, 240));
@@ -81,7 +143,7 @@ public class Dashboard extends javax.swing.JFrame {
         Prioridad1.setRows(5);
         Cola1TLOU.setViewportView(Prioridad1);
 
-        jPanel1.add(Cola1TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 460, 290, 100));
+        jPanel1.add(Cola1TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 460, 290, 100));
 
         Prioridad2.setEditable(false);
         Prioridad2.setColumns(20);
@@ -112,6 +174,15 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(HalfTime, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 330, -1, -1));
 
+        idRM.setEditable(false);
+        idRM.setRequestFocusEnabled(false);
+        idRM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idRMActionPerformed(evt);
+            }
+        });
+        jPanel1.add(idRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 140, 30, -1));
+
         idTLOU.setEditable(false);
         idTLOU.setRequestFocusEnabled(false);
         idTLOU.addActionListener(new java.awt.event.ActionListener() {
@@ -121,38 +192,89 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jPanel1.add(idTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 120, 30, -1));
 
+        nombreRM.setEditable(false);
+        jPanel1.add(nombreRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 150, -1));
+
         nombreTLOU.setEditable(false);
         jPanel1.add(nombreTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 180, 150, -1));
+
+        poderRM.setEditable(false);
+        jPanel1.add(poderRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, 30, -1));
 
         poderTLOU.setEditable(false);
         jPanel1.add(poderTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 240, 30, -1));
 
         Prioridad1TLOU.setForeground(new java.awt.Color(255, 255, 255));
         Prioridad1TLOU.setText("Prioridad 1");
-        jPanel1.add(Prioridad1TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 430, -1, -1));
+        jPanel1.add(Prioridad1TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, -1));
 
         Prioridad2TLOU.setForeground(new java.awt.Color(255, 255, 255));
         Prioridad2TLOU.setText("Prioridad 2");
-        jPanel1.add(Prioridad2TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 590, -1, -1));
+        jPanel1.add(Prioridad2TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 620, -1, -1));
 
         Prioridad3TLOU.setForeground(new java.awt.Color(255, 255, 255));
         Prioridad3TLOU.setText("Prioridad 3");
-        jPanel1.add(Prioridad3TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 590, -1, -1));
+        jPanel1.add(Prioridad3TLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 620, -1, -1));
 
         IDTLOU.setForeground(new java.awt.Color(255, 255, 255));
         IDTLOU.setText("ID");
-        jPanel1.add(IDTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 100, -1, -1));
+        jPanel1.add(IDTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, -1, -1));
 
         NameTLOU.setForeground(new java.awt.Color(255, 255, 255));
         NameTLOU.setText("Nombre");
-        jPanel1.add(NameTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 160, -1, -1));
+        jPanel1.add(NameTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 180, -1, -1));
 
         PoderTLOU.setForeground(new java.awt.Color(255, 255, 255));
         PoderTLOU.setText("Poder ");
-        jPanel1.add(PoderTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 220, -1, -1));
+        jPanel1.add(PoderTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 240, -1, -1));
+
+        Prioridad1Rm.setForeground(new java.awt.Color(255, 255, 255));
+        Prioridad1Rm.setText("Prioridad 1");
+        jPanel1.add(Prioridad1Rm, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 430, -1, -1));
+
+        Prioridad2TLOU1.setForeground(new java.awt.Color(255, 255, 255));
+        Prioridad2TLOU1.setText("Prioridad 2");
+        jPanel1.add(Prioridad2TLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 590, -1, -1));
+
+        Prioridad3TLOU1.setForeground(new java.awt.Color(255, 255, 255));
+        Prioridad3TLOU1.setText("Prioridad 3");
+        jPanel1.add(Prioridad3TLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 590, -1, -1));
+
+        Prioridad6.setEditable(false);
+        Prioridad6.setColumns(20);
+        Prioridad6.setRows(5);
+        Cola3RM.setViewportView(Prioridad6);
+
+        jPanel1.add(Cola3RM, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 650, 280, 90));
+
+        Prioridad5.setEditable(false);
+        Prioridad5.setColumns(20);
+        Prioridad5.setRows(5);
+        Cola2RM.setViewportView(Prioridad5);
+
+        jPanel1.add(Cola2RM, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 650, 260, 90));
+
+        Prioridad4.setEditable(false);
+        Prioridad4.setColumns(20);
+        Prioridad4.setRows(5);
+        Cola1RM.setViewportView(Prioridad4);
+
+        jPanel1.add(Cola1RM, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 470, 290, 100));
+
+        IDTLOU1.setForeground(new java.awt.Color(255, 255, 255));
+        IDTLOU1.setText("ID");
+        jPanel1.add(IDTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 100, -1, -1));
+
+        NameTLOU1.setForeground(new java.awt.Color(255, 255, 255));
+        NameTLOU1.setText("Nombre");
+        jPanel1.add(NameTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 160, -1, -1));
+
+        PoderTLOU1.setForeground(new java.awt.Color(255, 255, 255));
+        PoderTLOU1.setText("Poder ");
+        jPanel1.add(PoderTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 220, -1, -1));
 
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProyectoSO2/Imagenes/Proyecto SO HboMax Interface (1366 × 768 px) (1).png"))); // NOI18N
-        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -176,6 +298,10 @@ public class Dashboard extends javax.swing.JFrame {
     private void idTLOUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTLOUActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idTLOUActionPerformed
+
+    private void idRMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idRMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idRMActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,27 +339,46 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane Cola1RM;
     private javax.swing.JScrollPane Cola1TLOU;
+    private javax.swing.JScrollPane Cola2RM;
     private javax.swing.JScrollPane Cola2TLOU;
+    private javax.swing.JScrollPane Cola3RM;
     private javax.swing.JScrollPane Cola3TLOU;
     private javax.swing.JLabel Fondo;
     private javax.swing.JButton HalfTime;
     private javax.swing.JLabel IDTLOU;
+    private javax.swing.JLabel IDTLOU1;
+    public javax.swing.JPanel IconRM;
     public javax.swing.JPanel IconTLOU;
     private javax.swing.JLabel NameTLOU;
+    private javax.swing.JLabel NameTLOU1;
     private javax.swing.JLabel PoderTLOU;
+    private javax.swing.JLabel PoderTLOU1;
     public static javax.swing.JTextArea Prioridad1;
+    private javax.swing.JLabel Prioridad1Rm;
     private javax.swing.JLabel Prioridad1TLOU;
     public static javax.swing.JTextArea Prioridad2;
     private javax.swing.JLabel Prioridad2TLOU;
+    private javax.swing.JLabel Prioridad2TLOU1;
     public static javax.swing.JTextArea Prioridad3;
     private javax.swing.JLabel Prioridad3TLOU;
+    private javax.swing.JLabel Prioridad3TLOU1;
+    public static javax.swing.JTextArea Prioridad4;
+    public static javax.swing.JTextArea Prioridad5;
+    public static javax.swing.JTextArea Prioridad6;
     public static javax.swing.JTextArea Refuerzos;
     public static javax.swing.JLabel TLOUIcon;
+    public static javax.swing.JLabel TLOUIcon1;
+    public static javax.swing.JLabel TLOUIcon2;
+    public static javax.swing.JLabel TLOUIcon3;
+    public static javax.swing.JTextField idRM;
     public static javax.swing.JTextField idTLOU;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPaneRefuerzos;
+    public static javax.swing.JTextField nombreRM;
     public static javax.swing.JTextField nombreTLOU;
+    public static javax.swing.JTextField poderRM;
     public static javax.swing.JTextField poderTLOU;
     // End of variables declaration//GEN-END:variables
 }
