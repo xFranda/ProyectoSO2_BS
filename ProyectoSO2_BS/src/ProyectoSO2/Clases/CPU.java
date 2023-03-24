@@ -73,10 +73,10 @@ public class CPU {
             
 
             if (serieTLOU != null && serieRM != null ) {
-                 System.out.println("ID:" + serieRM.id + " Prioridad:" + serieRM.prioridad + " Contador: " + serieRM.cont + " Personaje: "+serieRM.nombre + " Poder: "+serieRM.poder);
+                 System.out.println("ID:" + serieRM.id + " Prioridad:" + serieRM.prioridad + " Contador: " + serieRM.cont + " Personaje: "+serieRM.nombre + " Poder: "+serieRM.poder +"RM");
                  System.out.println(admin.stringRM1());
 
-                System.out.println("ID:" + serieTLOU.id + " Prioridad:" + serieTLOU.prioridad + " Contador: " + serieTLOU.contador + " Personaje: "+serieTLOU.personaje + " Poder: "+serieTLOU.poder);
+                System.out.println("ID:" + serieTLOU.id + " Prioridad:" + serieTLOU.prioridad + " Contador: " + serieTLOU.contador + " Personaje: "+serieTLOU.personaje + " Poder: "+serieTLOU.poder +"TLOU");
                 gtp4.recibirSeries(serieTLOU, serieRM, admin.nivel1TLOU, admin.nivel2TLOU, admin.nivel3TLOU, admin.refuerzo, admin.nivel1RM, admin.nivel2RM, admin.nivel3RM);        //La IA que realizara las comparaciones de series
             }
 
@@ -97,10 +97,7 @@ public class CPU {
             Dashboard.Prioridad5.setText(cola2RM);
             Dashboard.Prioridad6.setText(cola3RM);
             Dashboard.Refuerzos.setText(refuerzo);
-            
-        
-            int prob_agregar= new Random().nextInt(100)+1;
-            
+                        
             if (contador_ciclos == 2) {  //Si ya se recorrieron dos ciclos entra en esta condicional
                 
                 
