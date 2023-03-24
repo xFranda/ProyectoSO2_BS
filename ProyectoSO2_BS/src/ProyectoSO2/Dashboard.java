@@ -49,8 +49,11 @@ public class Dashboard extends javax.swing.JFrame {
         idTLOU = new javax.swing.JTextField();
         nombreRM = new javax.swing.JTextField();
         nombreTLOU = new javax.swing.JTextField();
+        RMListo = new javax.swing.JTextField();
+        TLOUListo = new javax.swing.JTextField();
         poderRM = new javax.swing.JTextField();
         poderTLOU = new javax.swing.JTextField();
+        Prioridad1Rm1 = new javax.swing.JLabel();
         Prioridad1TLOU = new javax.swing.JLabel();
         Prioridad2TLOU = new javax.swing.JLabel();
         Prioridad3TLOU = new javax.swing.JLabel();
@@ -84,7 +87,7 @@ public class Dashboard extends javax.swing.JFrame {
         IconRM.setLayout(IconRMLayout);
         IconRMLayout.setHorizontalGroup(
             IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(RMIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+            .addComponent(RMIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         IconRMLayout.setVerticalGroup(
             IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,7 +102,7 @@ public class Dashboard extends javax.swing.JFrame {
         IconTLOU.setLayout(IconTLOULayout);
         IconTLOULayout.setHorizontalGroup(
             IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TLOUIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
+            .addComponent(TLOUIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         IconTLOULayout.setVerticalGroup(
             IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -163,16 +166,33 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.add(idTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 120, 30, -1));
 
         nombreRM.setEditable(false);
-        jPanel1.add(nombreRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 200, 150, -1));
+        jPanel1.add(nombreRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 210, 150, -1));
 
         nombreTLOU.setEditable(false);
         jPanel1.add(nombreTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 180, 150, -1));
+
+        RMListo.setEditable(false);
+        RMListo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RMListoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(RMListo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, 30, -1));
+
+        TLOUListo.setEditable(false);
+        jPanel1.add(TLOUListo, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, 30, -1));
 
         poderRM.setEditable(false);
         jPanel1.add(poderRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 270, 30, -1));
 
         poderTLOU.setEditable(false);
         jPanel1.add(poderTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 240, 30, -1));
+
+        Prioridad1Rm1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        Prioridad1Rm1.setForeground(new java.awt.Color(255, 255, 255));
+        Prioridad1Rm1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Prioridad1Rm1.setText("PUNTAJE");
+        jPanel1.add(Prioridad1Rm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, 100, -1));
 
         Prioridad1TLOU.setForeground(new java.awt.Color(255, 255, 255));
         Prioridad1TLOU.setText("Prioridad 1");
@@ -273,6 +293,10 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_idRMActionPerformed
 
+    private void RMListoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RMListoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RMListoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -327,6 +351,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel PoderTLOU1;
     public static javax.swing.JTextArea Prioridad1;
     private javax.swing.JLabel Prioridad1Rm;
+    private javax.swing.JLabel Prioridad1Rm1;
     private javax.swing.JLabel Prioridad1TLOU;
     public static javax.swing.JTextArea Prioridad2;
     private javax.swing.JLabel Prioridad2TLOU;
@@ -338,8 +363,10 @@ public class Dashboard extends javax.swing.JFrame {
     public static javax.swing.JTextArea Prioridad5;
     public static javax.swing.JTextArea Prioridad6;
     public static javax.swing.JLabel RMIcon;
+    public static javax.swing.JTextField RMListo;
     public static javax.swing.JTextArea Refuerzos;
     public static javax.swing.JLabel TLOUIcon;
+    public static javax.swing.JTextField TLOUListo;
     public static javax.swing.JTextField idRM;
     public static javax.swing.JTextField idTLOU;
     private javax.swing.JPanel jPanel1;

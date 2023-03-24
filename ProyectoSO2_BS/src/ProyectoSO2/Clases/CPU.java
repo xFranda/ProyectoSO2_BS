@@ -25,6 +25,7 @@ public class CPU {
     String cola2RM; 
     String cola3RM;
     String refuerzo;
+    String refuerzoRM;
     Administrador admin;
     IA gtp4;
     
@@ -62,7 +63,8 @@ public class CPU {
             cola1RM = admin.stringRM1();       //Obtiene la lista de prioridad 1 en un String
             cola2RM = admin.stringRM2();       //Obtiene la lista de prioridad 2 en un String
             cola3RM = admin.stringRM3();       //Obtiene la lista de prioridad 3 en un String
-           
+            refuerzoRM = admin.stringRefuerzo();
+                    
             Dashboard.Prioridad1.setText(cola1TLOU);
             Dashboard.Prioridad2.setText(cola2TLOU);
             Dashboard.Prioridad3.setText(cola3TLOU);
@@ -77,7 +79,7 @@ public class CPU {
                  System.out.println(admin.stringRM1());
 
                 System.out.println("ID:" + serieTLOU.id + " Prioridad:" + serieTLOU.prioridad + " Contador: " + serieTLOU.contador + " Personaje: "+serieTLOU.personaje + " Poder: "+serieTLOU.poder +"TLOU");
-                gtp4.recibirSeries(serieTLOU, serieRM, admin.nivel1TLOU, admin.nivel2TLOU, admin.nivel3TLOU, admin.refuerzo, admin.nivel1RM, admin.nivel2RM, admin.nivel3RM);        //La IA que realizara las comparaciones de series
+                gtp4.recibirSeries(serieTLOU, serieRM, admin.nivel1TLOU, admin.nivel2TLOU, admin.nivel3TLOU, admin.refuerzo, admin.nivel1RM, admin.nivel2RM, admin.nivel3RM, admin.refuerzoRM);        //La IA que realizara las comparaciones de series
             }
 
             cola1TLOU = admin.stringTLOU_N1();       //Obtiene la lista de prioridad 1 en un String

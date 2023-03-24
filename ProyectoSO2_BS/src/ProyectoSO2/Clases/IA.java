@@ -41,7 +41,7 @@ public class IA {
         return RMlistos;
     }
     
-    public void recibirSeries(TLOU serieTLOU, RyM serieRM, Cola A, Cola B, Cola C, Cola D, ColaRyM F,ColaRyM G, ColaRyM H) {
+    public void recibirSeries(TLOU serieTLOU, RyM serieRM, Cola A, Cola B, Cola C, Cola D, ColaRyM F,ColaRyM G, ColaRyM H, ColaRyM I) {
         
         Icon icono;
         Icon iconoRM;
@@ -160,17 +160,34 @@ public class IA {
                     
                 serieTLOU.contador = 0;                                     
                 D.insertarCola(serieTLOU);                                     
-                //D.insertarCola(serieRM); Para que se inserte la serie de RM en caso de requerir refuerzo las 2.
+                I.insertar(serieRM);
                 System.out.println("Refuerzo");
+                serieRM.cont = 0;
+                
                 
 
                 
                 
             //probabilidad de salir al mercado
             }else {
-                this.RMlistos++;
-                this.TLOUlistos++;
-                System.out.println("Salio al mercadito");
+                
+                if (serieTLOU.poder>serieRM.poder){
+                    System.out.println("Gano TLOU");
+                    this.TLOUlistos++;
+                }
+                if (serieRM.poder > serieTLOU.poder){
+                    System.out.println("Gano RM");
+                    this.RMlistos++;
+                }
+                if (serieTLOU.poder == serieRM.poder){
+                    D.insertarCola(serieTLOU);
+                    I.insertar(serieRM);
+                    System.out.println("Refuerzo por empatadores");
+                }
+                
+                
+                
+                
             }
             Dashboard.TLOUIcon.setIcon(null);
             Dashboard.idTLOU.setText("");
@@ -180,6 +197,8 @@ public class IA {
             Dashboard.idRM.setText("");
             Dashboard.nombreRM.setText("");
             Dashboard.poderRM.setText("");
+            Dashboard.RMListo.setText(String.valueOf(this.RMlistos));
+            Dashboard.TLOUListo.setText(String.valueOf(this.TLOUlistos));
             
             
             
