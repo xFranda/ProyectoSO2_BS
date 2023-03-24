@@ -210,8 +210,7 @@ public class Administrador {
          int prioridad = PrioridadRM();
          String num = String.valueOf(new Random().nextInt(3)+1);
          String nombre = api.APIname(num);
-         String foto = api.APIimage(num);
-         
+         String foto = api.APIimage(num);        
          int poder = new Random().nextInt(10)+1;
          RyM serie = new RyM (this.idTLOU,prioridad,nombre,poder, foto);
          
@@ -336,7 +335,7 @@ public class Administrador {
             RyM serie = nivel2RM.retirar();
             return serie;
             
-        } else if (!nivel3TLOU.colaVacia()) {
+        } else if (!nivel3RM.colaVacia()) {
 
             RyM serie = nivel3RM.retirar();
             return serie;
