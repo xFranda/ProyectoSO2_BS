@@ -39,8 +39,7 @@ public class Administrador {
     nivel2RM = new ColaRyM();
     nivel3RM = new ColaRyM();
     api = new API();
-    
-    
+ 
     }
     
     public Cola getRefuerzo() {
@@ -77,9 +76,6 @@ public class Administrador {
     public int getIdRM() {
         return idRM;
     }
-    
-   
-    
 
     public int minutosTLOU(){
         int intro = 0;
