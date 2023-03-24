@@ -291,10 +291,10 @@ public class Administrador {
 
             int prob = new Random().nextInt(100);   
 
-            if (prob <= 70) {
-
-                TLOU temp = refuerzo.sacarCola();      
-                
+            if (prob <= 40) {
+                               
+                TLOU temp = refuerzo.sacarCola();   
+                               
                 switch (temp.prioridad) {        
 
                     case 1:

@@ -119,7 +119,7 @@ public class IA {
 
                           
                         F.insertar(serieRM); 
-                        System.out.println("cola 1");
+                        System.out.println("cola 4");
 
                         break;
 
@@ -127,7 +127,7 @@ public class IA {
 
                         G.insertar(serieRM);       
 
-                        System.out.println("cola 2");
+                        System.out.println("cola 5");
 
                         break;
 
@@ -135,7 +135,7 @@ public class IA {
 
                         H.insertar(serieRM);       
 
-                        System.out.println("cola 3");
+                        System.out.println("cola 6");
 
                         break;
 
