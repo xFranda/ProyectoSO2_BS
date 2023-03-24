@@ -208,9 +208,10 @@ public class Administrador {
     
         this.idRM++;       
          int prioridad = PrioridadRM();
+         String num = String.valueOf(new Random().nextInt(3)+1);
+         String nombre = api.APIname(num);
+         String foto = api.APIimage(num);
          
-         String nombre = api.APIname(String.valueOf(new Random().nextInt(3)+1));
-         String foto = api.APIimage(String.valueOf(new Random().nextInt(3)+1));
          int poder = new Random().nextInt(10)+1;
          RyM serie = new RyM (this.idTLOU,prioridad,nombre,poder, foto);
          
