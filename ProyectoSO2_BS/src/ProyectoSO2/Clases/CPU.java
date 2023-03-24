@@ -85,6 +85,7 @@ public class CPU {
                 
             contador_ciclos = 0;
             System.out.println("Agregando");
+            admin.agregarRM();
             admin.agregarTLOU();//Se agrega TLOU
             Thread.sleep(1000);
 
@@ -93,6 +94,7 @@ public class CPU {
             Thread.sleep(1000);  //Se duermo un segundo el programa para que se pueda revisar bien
 
             serieTLOU = admin.sigTLOU();
+            serieRM = admin.sigRM();
             contador_ciclos++;
 
         }
