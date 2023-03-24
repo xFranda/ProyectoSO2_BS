@@ -206,7 +206,7 @@ public class Administrador {
     }
     public void agregarRM() throws IOException{
     
-        this.idRM++;       
+         this.idRM++;       
          int prioridad = PrioridadRM();
          String num = String.valueOf(new Random().nextInt(3)+1);
          String nombre = api.APIname(num);

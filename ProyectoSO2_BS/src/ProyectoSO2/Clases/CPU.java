@@ -78,10 +78,6 @@ public class CPU {
             Dashboard.Prioridad3.setText(cola3TLOU);
             Dashboard.Refuerzos.setText(refuerzo);
             
-            
-        
-            int prob_agregar= new Random().nextInt(100)+1;
-            
             if (contador_ciclos == 2) {  //Si ya se recorrieron dos ciclos entra en esta condicional
                 
                 
