@@ -41,7 +41,7 @@ public class IA {
         return RMlistos;
     }
     
-    public void recibirSeries(TLOU serieTLOU, RyM serieRM, Cola A, Cola B, Cola C, Cola D) {
+    public void recibirSeries(TLOU serieTLOU, Cola A, Cola B, Cola C, Cola D) {
         
         Icon icono;
         Image imagen = null;
@@ -53,10 +53,10 @@ public class IA {
             imagen = ImageIO.read(url);
             icono = new ImageIcon(imagen);
             
-            URL urlRM = new URL(serieRM.foto);
+            //URL urlRM = new URL(serieRM.foto);
             //Asignacion de url a la imagen
-            imagen = ImageIO.read(urlRM);
-            icono = new ImageIcon(imagen);
+            //imagen = ImageIO.read(urlRM);
+            //icono = new ImageIcon(imagen);
             
             Dashboard.TLOUIcon.setIcon(icono); //Metodo para que se coloque un Ícono al dashboard serieTLOU.poder
             Dashboard.idTLOU.setText(String.valueOf(serieTLOU.id));
@@ -79,14 +79,14 @@ public class IA {
             if (prob <= 27){
                 
                 serieTLOU.contador = 0;
-                //serieRM.contador =0;
+                //serieRM.cont =0;
                 
                 switch (serieTLOU.prioridad) {
 
                     case 1:
 
                         A.insertarCola(serieTLOU);       
-                        //E.insertarCola(serieRM) 
+                        //E.insertarCola(serieRM); 
                         System.out.println("cola 1");
 
                         break;
@@ -113,7 +113,7 @@ public class IA {
                 
                   
                     //Para verificar la prioridad de la serie de RM que llegó y meterla en su cola
-                    switch (serieRM.prioridad) {
+                    /*switch (serieRM.prioridad) {
 
                     case 1:
 
