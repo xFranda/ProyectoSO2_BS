@@ -96,28 +96,8 @@ public class CPU {
             contador_ciclos++;
 
         }
+
         
-        
-        /*int prob = new Random().nextInt(100)+1;
-                
-                if (prob <= 70){
-                contador_ciclos = 0;
-                System.out.println("Agregando");
-                admin.agregarTLOU();//Se agrega TLOU
-                Thread.sleep(1000);
-                
-                }else{
-                    System.out.println("Al administrador le dio flojera agregar una serie");
-                }
-                */
-        
-        
-        
-        
-        
-        
-        
- 
     }
     
     
