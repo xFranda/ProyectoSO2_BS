@@ -289,7 +289,7 @@ public class Administrador {
     //Metodo que se utiliza para actializar la cola de refuerzo
     public void actColaRefuerzo() {
 
-        if (refuerzo.colaVacia() == false) {       
+        if (refuerzo.colaVacia() == false && refuerzoRM.colaVacia() == false) {       
 
             int prob = new Random().nextInt(100);   
 
@@ -442,7 +442,8 @@ public class Administrador {
 
     public String stringRefuerzo() {
         String texto = refuerzo.text(refuerzo);
-        return texto;
+        String textoRM = refuerzoRM.texto(refuerzoRM);
+        return texto+textoRM;
     }        
     
     

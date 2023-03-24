@@ -33,11 +33,9 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         IconRM = new javax.swing.JPanel();
-        TLOUIcon3 = new javax.swing.JLabel();
-        TLOUIcon2 = new javax.swing.JLabel();
+        RMIcon = new javax.swing.JLabel();
         IconTLOU = new javax.swing.JPanel();
         TLOUIcon = new javax.swing.JLabel();
-        TLOUIcon1 = new javax.swing.JLabel();
         Cola1TLOU = new javax.swing.JScrollPane();
         Prioridad1 = new javax.swing.JTextArea();
         Cola2TLOU = new javax.swing.JScrollPane();
@@ -80,63 +78,35 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(1366, 768));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        TLOUIcon3.setForeground(new java.awt.Color(255, 255, 255));
-
-        TLOUIcon2.setForeground(new java.awt.Color(255, 255, 255));
+        RMIcon.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout IconRMLayout = new javax.swing.GroupLayout(IconRM);
         IconRM.setLayout(IconRMLayout);
         IconRMLayout.setHorizontalGroup(
             IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IconRMLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(TLOUIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(IconRMLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(TLOUIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(RMIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
         );
         IconRMLayout.setVerticalGroup(
             IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IconRMLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(TLOUIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(IconRMLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(TLOUIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(RMIcon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
         );
 
-        jPanel1.add(IconRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 120, 260, 240));
+        jPanel1.add(IconRM, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 190, 190));
 
         TLOUIcon.setForeground(new java.awt.Color(255, 255, 255));
-
-        TLOUIcon1.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout IconTLOULayout = new javax.swing.GroupLayout(IconTLOU);
         IconTLOU.setLayout(IconTLOULayout);
         IconTLOULayout.setHorizontalGroup(
             IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TLOUIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-            .addGroup(IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(IconTLOULayout.createSequentialGroup()
-                    .addGap(10, 10, 10)
-                    .addComponent(TLOUIcon1, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
-                    .addContainerGap()))
+            .addComponent(TLOUIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
         );
         IconTLOULayout.setVerticalGroup(
             IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TLOUIcon, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-            .addGroup(IconTLOULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(IconTLOULayout.createSequentialGroup()
-                    .addGap(10, 10, 10)
-                    .addComponent(TLOUIcon1, javax.swing.GroupLayout.DEFAULT_SIZE, 224, Short.MAX_VALUE)
-                    .addContainerGap()))
+            .addComponent(TLOUIcon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
         );
 
-        jPanel1.add(IconTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, 260, 240));
+        jPanel1.add(IconTLOU, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 170, 190, 190));
 
         Prioridad1.setEditable(false);
         Prioridad1.setColumns(20);
@@ -273,7 +243,7 @@ public class Dashboard extends javax.swing.JFrame {
         PoderTLOU1.setText("Poder ");
         jPanel1.add(PoderTLOU1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 220, -1, -1));
 
-        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProyectoSO2/Imagenes/Proyecto SO HboMax Interface (1366 × 768 px) (1).png"))); // NOI18N
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProyectoSO2/Imagenes/Proyecto SO HboMax Interface (1366 × 768 px) (3).png"))); // NOI18N
         jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 20, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -367,11 +337,9 @@ public class Dashboard extends javax.swing.JFrame {
     public static javax.swing.JTextArea Prioridad4;
     public static javax.swing.JTextArea Prioridad5;
     public static javax.swing.JTextArea Prioridad6;
+    public static javax.swing.JLabel RMIcon;
     public static javax.swing.JTextArea Refuerzos;
     public static javax.swing.JLabel TLOUIcon;
-    public static javax.swing.JLabel TLOUIcon1;
-    public static javax.swing.JLabel TLOUIcon2;
-    public static javax.swing.JLabel TLOUIcon3;
     public static javax.swing.JTextField idRM;
     public static javax.swing.JTextField idTLOU;
     private javax.swing.JPanel jPanel1;
