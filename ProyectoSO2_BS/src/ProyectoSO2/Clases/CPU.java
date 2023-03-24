@@ -35,7 +35,9 @@ public class CPU {
         this.contador_ciclos=0;
         
         int p = new Random().nextInt(3)+1;
-        TLOU serieTLOU = null; //new TLOU(admin.getIdTLOU(),p,"Rick Sanchez","https://rickandmortyapi.com/api/character/avatar/1.jpeg",5);
+        TLOU serieTLOU = null;
+        RyM serieRM = null; 
+        //new TLOU(admin.getIdTLOU(),p,"Rick Sanchez","https://rickandmortyapi.com/api/character/avatar/1.jpeg",5);
         //admin.listaPrioridadTLOU(serieTLOU);
         
         
@@ -58,7 +60,7 @@ public class CPU {
             Dashboard.Refuerzos.setText(refuerzo);
             
 
-            if (serieTLOU != null) {
+            if (serieTLOU != null && serieRM != null ) {
 
                 System.out.println("ID:" + serieTLOU.id + " Prioridad:" + serieTLOU.prioridad + " Contador: " + serieTLOU.contador + " Personaje: "+serieTLOU.personaje + " Poder: "+serieTLOU.poder);
                 gtp4.recibirSeries(serieTLOU, admin.nivel1TLOU, admin.nivel2TLOU, admin.nivel3TLOU, admin.refuerzo);        //La IA que realizara las comparaciones de series

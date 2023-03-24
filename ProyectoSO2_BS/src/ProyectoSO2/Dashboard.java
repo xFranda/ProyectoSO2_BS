@@ -171,7 +171,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void HalfTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HalfTimeActionPerformed
         // TODO add your handling code here:
-        Reproductor.launch();
+      
     }//GEN-LAST:event_HalfTimeActionPerformed
 
     private void idTLOUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTLOUActionPerformed
