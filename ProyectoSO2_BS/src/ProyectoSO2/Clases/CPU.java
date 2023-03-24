@@ -50,7 +50,7 @@ public class CPU {
 
             admin.actColasPrioridad(admin.nivel3TLOU, admin.nivel2TLOU);//El administrador ejecuta la funcion de actualizar colas
             admin.actColasPrioridad(admin.nivel2TLOU, admin.nivel1TLOU);
-             admin.actColasPrioridadRM(admin.nivel3RM, admin.nivel2RM);
+            admin.actColasPrioridadRM(admin.nivel3RM, admin.nivel2RM);
             admin.actColasPrioridadRM(admin.nivel2RM, admin.nivel1RM);
             admin.actColaRefuerzo();
 
@@ -73,6 +73,8 @@ public class CPU {
             
 
             if (serieTLOU != null && serieRM != null ) {
+                 System.out.println("ID:" + serieRM.id + " Prioridad:" + serieRM.prioridad + " Contador: " + serieRM.cont + " Personaje: "+serieRM.nombre + " Poder: "+serieRM.poder);
+                 System.out.println(admin.stringRM1());
 
                 System.out.println("ID:" + serieTLOU.id + " Prioridad:" + serieTLOU.prioridad + " Contador: " + serieTLOU.contador + " Personaje: "+serieTLOU.personaje + " Poder: "+serieTLOU.poder);
                 gtp4.recibirSeries(serieTLOU, serieRM, admin.nivel1TLOU, admin.nivel2TLOU, admin.nivel3TLOU, admin.refuerzo, admin.nivel1RM, admin.nivel2RM, admin.nivel3RM);        //La IA que realizara las comparaciones de series

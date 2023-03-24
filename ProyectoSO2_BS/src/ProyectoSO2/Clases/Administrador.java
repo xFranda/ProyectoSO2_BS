@@ -212,7 +212,7 @@ public class Administrador {
          String nombre = api.APIname(num);
          String foto = api.APIimage(num);        
          int poder = new Random().nextInt(10)+1;
-         RyM serie = new RyM (this.idTLOU,prioridad,nombre,poder, foto);
+         RyM serie = new RyM (this.idRM,prioridad,nombre,poder, foto);
          
          switch (serie.prioridad) {                     
             case 1:
