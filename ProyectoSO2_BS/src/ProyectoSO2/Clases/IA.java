@@ -44,6 +44,7 @@ public class IA {
     public void recibirSeries(TLOU serieTLOU, RyM serieRM, Cola A, Cola B, Cola C, Cola D, ColaRyM F,ColaRyM G, ColaRyM H) {
         
         Icon icono;
+        Icon iconoRM;
         Image imagen = null;
         try {
             try {
@@ -56,13 +57,16 @@ public class IA {
             URL urlRM = new URL(serieRM.foto);
             //Asignacion de url a la imagen
             imagen = ImageIO.read(urlRM);
-            icono = new ImageIcon(imagen);
+            iconoRM = new ImageIcon(imagen);
             
             Dashboard.TLOUIcon.setIcon(icono); //Metodo para que se coloque un Ícono al dashboard serieTLOU.poder
             Dashboard.idTLOU.setText(String.valueOf(serieTLOU.id));
             Dashboard.nombreTLOU.setText(serieTLOU.personaje);
             Dashboard.poderTLOU.setText(String.valueOf(serieTLOU.poder));
-            
+            Dashboard.RMIcon.setIcon(iconoRM);
+            Dashboard.idRM.setText(String.valueOf(serieRM.id));
+            Dashboard.nombreRM.setText(serieRM.nombre);
+            Dashboard.poderRM.setText(String.valueOf(serieRM.poder));
             
                } catch (IOException e) {
                                       e.printStackTrace();}
@@ -172,6 +176,11 @@ public class IA {
             Dashboard.idTLOU.setText("");
             Dashboard.nombreTLOU.setText("");
             Dashboard.poderTLOU.setText("");
+            Dashboard.RMIcon.setIcon(null);
+            Dashboard.idRM.setText("");
+            Dashboard.nombreRM.setText("");
+            Dashboard.poderRM.setText("");
+            
             
             
         } catch (InterruptedException ex) {

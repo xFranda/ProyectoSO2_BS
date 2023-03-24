@@ -34,7 +34,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         IconRM = new javax.swing.JPanel();
         TLOUIcon3 = new javax.swing.JLabel();
-        TLOUIcon2 = new javax.swing.JLabel();
+        RMIcon = new javax.swing.JLabel();
         IconTLOU = new javax.swing.JPanel();
         TLOUIcon = new javax.swing.JLabel();
         TLOUIcon1 = new javax.swing.JLabel();
@@ -82,7 +82,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         TLOUIcon3.setForeground(new java.awt.Color(255, 255, 255));
 
-        TLOUIcon2.setForeground(new java.awt.Color(255, 255, 255));
+        RMIcon.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout IconRMLayout = new javax.swing.GroupLayout(IconRM);
         IconRM.setLayout(IconRMLayout);
@@ -90,7 +90,7 @@ public class Dashboard extends javax.swing.JFrame {
             IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IconRMLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(TLOUIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(RMIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(IconRMLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -101,7 +101,7 @@ public class Dashboard extends javax.swing.JFrame {
             IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, IconRMLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(TLOUIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(RMIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(IconRMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(IconRMLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -367,10 +367,10 @@ public class Dashboard extends javax.swing.JFrame {
     public static javax.swing.JTextArea Prioridad4;
     public static javax.swing.JTextArea Prioridad5;
     public static javax.swing.JTextArea Prioridad6;
+    public static javax.swing.JLabel RMIcon;
     public static javax.swing.JTextArea Refuerzos;
     public static javax.swing.JLabel TLOUIcon;
     public static javax.swing.JLabel TLOUIcon1;
-    public static javax.swing.JLabel TLOUIcon2;
     public static javax.swing.JLabel TLOUIcon3;
     public static javax.swing.JTextField idRM;
     public static javax.swing.JTextField idTLOU;
