@@ -7,6 +7,7 @@ package ProyectoSO2.Clases;
 
 import ProyectoSO2.Dashboard;
 import java.awt.Image;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Random;
@@ -169,14 +170,18 @@ public class IA {
                 
                 
             //probabilidad de salir al mercado
-            }else {
+            }else{
                 
                 if (serieTLOU.poder>serieRM.poder){
                     System.out.println("Gano TLOU");
+                    String tlou = "ID:" + serieTLOU.id + " Prioridad:" + serieTLOU.prioridad + " Contador: " + serieTLOU.contador + " Personaje: "+serieTLOU.personaje+ " "+ serieTLOU.localizador +"\n";
+                    txt(tlou);
                     this.TLOUlistos++;
                 }
                 if (serieRM.poder > serieTLOU.poder){
                     System.out.println("Gano RM");
+                    String rm = "ID:" + serieRM.id + " Prioridad:" + serieRM.prioridad + " Contador: " + serieRM.cont + " Personaje: "+serieRM.nombre+" "+ serieTLOU.localizador +"\n";
+                    txt(rm);
                     this.RMlistos++;
                 }
                 if (serieTLOU.poder == serieRM.poder){
@@ -209,5 +214,21 @@ public class IA {
         
         
     }
+    
+    public void txt (String ganador){
+    try {
+            String filename = "C:/Users/frand/OneDrive/Documentos/NetBeansProjects/ProyectoSO2_BS/datos.txt";
+            FileWriter writer = new FileWriter(filename,true);
+            writer.write(ganador);
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+    }
+    
+    
+    
+    
+}
+    
     
 }

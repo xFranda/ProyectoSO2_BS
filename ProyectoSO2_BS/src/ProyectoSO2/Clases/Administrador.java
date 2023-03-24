@@ -5,6 +5,7 @@
  */
 package ProyectoSO2.Clases;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
@@ -445,10 +446,6 @@ public class Administrador {
         String textoRM = refuerzoRM.texto(refuerzoRM);
         return texto+textoRM;
     }        
-    
-    
-    
-    
     
     
     
