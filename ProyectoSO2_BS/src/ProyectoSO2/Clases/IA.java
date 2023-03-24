@@ -41,7 +41,7 @@ public class IA {
         return RMlistos;
     }
     
-    public void recibirSeries(TLOU serieTLOU, Cola A, Cola B, Cola C, Cola D) {
+    public void recibirSeries(TLOU serieTLOU, RyM serieRM, Cola A, Cola B, Cola C, Cola D) {
         
         Icon icono;
         Image imagen = null;
@@ -52,6 +52,12 @@ public class IA {
             //Asignacion de url a la imagen
             imagen = ImageIO.read(url);
             icono = new ImageIcon(imagen);
+            
+            URL urlRM = new URL(serieRM.foto);
+            //Asignacion de url a la imagen
+            imagen = ImageIO.read(urlRM);
+            icono = new ImageIcon(imagen);
+            
             Dashboard.TLOUIcon.setIcon(icono); //Metodo para que se coloque un Ícono al dashboard serieTLOU.poder
             Dashboard.idTLOU.setText(String.valueOf(serieTLOU.id));
             Dashboard.nombreTLOU.setText(serieTLOU.personaje);
@@ -107,7 +113,7 @@ public class IA {
                 
                   
                     //Para verificar la prioridad de la serie de RM que llegó y meterla en su cola
-                    /*switch (serieRM.prioridad) {
+                    switch (serieRM.prioridad) {
 
                     case 1:
 
