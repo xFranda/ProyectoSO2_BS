@@ -47,6 +47,8 @@ public class CPU {
 
             admin.actColasPrioridad(admin.nivel3TLOU, admin.nivel2TLOU);//El administrador ejecuta la funcion de actualizar colas
             admin.actColasPrioridad(admin.nivel2TLOU, admin.nivel1TLOU);
+             admin.actColasPrioridadRM(admin.nivel3RM, admin.nivel2RM);
+            admin.actColasPrioridadRM(admin.nivel2RM, admin.nivel1RM);
             admin.actColaRefuerzo();
 
             cola1TLOU = admin.stringTLOU_N1();       //Obtiene la lista de prioridad 1 en un String

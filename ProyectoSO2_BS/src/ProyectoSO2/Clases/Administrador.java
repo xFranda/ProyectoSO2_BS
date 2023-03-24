@@ -259,6 +259,31 @@ public class Administrador {
     
     }
     
+     public void actColasPrioridadRM(ColaRyM A, ColaRyM B){
+    
+        if(A.colaVacia()== false){
+            
+                for (int i = 0; i < A.tam(A);i++){
+                
+                       RyM temp = A.retirar();
+                       temp.cont++;
+                
+                
+                    if (temp.cont ==8){
+                    
+                        temp.cont = 0;
+                        temp.prioridad--;
+                        B.insertar(temp);
+                    
+                    }else{
+                        A.insertar(temp);
+                    }
+                }
+        }
+    
+    }
+    
+    
     //Metodo que se utiliza para actializar la cola de refuerzo
     public void actColaRefuerzo() {
 
